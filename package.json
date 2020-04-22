@@ -25,6 +25,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+    "pretty": "prettier --write \"./**/*.{ts,tsx,js,jsx,json}\"",
     "report-coverage": "npm test -- --coverage --watchAll=false && codecov"
   },
   "eslintConfig": {
@@ -44,6 +45,7 @@
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.0",
-    "codecov": "^3.6.5"
+    "codecov": "^3.6.5",
+    "prettier": "^2.0.5"
   }
 }

@@ -1,6 +1,6 @@
-import React from "react";
-import logo from "../logo.svg";
-import * as S from "./App.styled";
+import React from 'react';
+import logo from '../logo.svg';
+import * as S from './App.styled';
 
 export const App = () => (
   <S.Container>
