@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../logo.svg';
+import logo from './svgs/logo.svg';
 import * as S from './App.styled';
 
 export const App = () => (
