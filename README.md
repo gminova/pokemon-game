@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.com/gminova/pokemon-game.svg?branch=master)](https://travis-ci.com/gminova/pokemon-game)
+
+[![codecov](https://codecov.io/gh/gminova/pokemon-game/branch/master/graph/badge.svg)](https://codecov.io/gh/gminova/pokemon-game)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
