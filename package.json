@@ -25,7 +25,8 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "pretty": "prettier --write \"./**/*.{ts,tsx,js,jsx,json}\"",
+    "pretty": "prettier --write \"./**/*.{ts,tsx,js,jsx,json,md,css}\"",
+    "codecov": "xdg-open coverage/lcov-report/index.html",
     "report-coverage": "npm test -- --coverage --watchAll=false"
   },
   "eslintConfig": {
