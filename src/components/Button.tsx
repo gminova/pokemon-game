@@ -3,10 +3,7 @@ import { generateRandomInteger } from '../utils/functions';
 
 const defaultUrl = 'https://pokeapi.co/static/pokeapi_256.888baca4.png';
 
-const pokeImgUrl = `https://pokeapi.co/api/v2/pokemon/${generateRandomInteger(
-  1,
-  100
-)}`;
+const pokeImgUrl = 'https://pokeapi.co/api/v2/pokemon/';
 
 export const Button = () => {
   const [imgUrl, setImgUrl] = useState(defaultUrl);
@@ -15,7 +12,7 @@ export const Button = () => {
     <>
       <button
         onClick={() =>
-          fetch(pokeImgUrl).then((res) =>
+          fetch(`${pokeImgUrl}${generateRandomInteger(1, 100)}`).then((res) =>
             res
               .json()
               .then((json) =>
