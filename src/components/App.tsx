@@ -6,6 +6,7 @@ import { Button } from './Button';
 export const App: React.FC = () => (
   <S.Container>
     <TextField text="Some text" />
-    <Button />
+
+    {/* <Button /> */}
   </S.Container>
 );
