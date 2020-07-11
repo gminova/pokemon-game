@@ -31,7 +31,7 @@ export const Button = () => {
       >
         Click me!
       </button>
-      <img src={imgUrl} />
+      <img src={imgUrl} alt="pokemon" />
     </>
   );
 };

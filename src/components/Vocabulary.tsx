@@ -1,3 +1,4 @@
 import React from 'react';
+import { Dashboard } from './Dashboard';
 
-export const Vocabulary = () => <h1>Vocabulary</h1>;
+export const Vocabulary = () => <Dashboard />;
