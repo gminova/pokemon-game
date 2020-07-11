@@ -1,8 +1,8 @@
 import React from 'react';
-import { TextField } from './TextField';
+import { UserProfile } from './UserProfile';
 
 export const Home = () => (
   <>
-    <TextField text="Some text" />
+    <UserProfile text="Some text" />
   </>
 );
