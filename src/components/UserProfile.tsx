@@ -17,7 +17,7 @@ export const UserProfile: React.FC<Props> = () => {
           <button
             onClick={() => {
               localStorage.setItem(
-                'userName',
+                'pokemonUser',
                 JSON.stringify({
                   userName: input,
                   score: 0,
