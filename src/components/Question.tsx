@@ -1,4 +1,5 @@
 import React from 'react';
+import { getScore, increaseScore, setScore } from '../utils/functions';
 
 type Readings = {
   text: string;
@@ -12,7 +13,10 @@ type QuestionProps = {
 
 export const Question = ({ kanji, readings }: QuestionProps) => {
   const listAnswers = readings.map(({ text, type }, i) => (
-    <li key={i} onClick={() => (type ? alert(type) : alert(type))}>
+    <li
+      key={i}
+      onClick={() => (type ? setScore(increaseScore(getScore())) : alert(type))}
+    >
       <button>{text}</button>
     </li>
   ));
