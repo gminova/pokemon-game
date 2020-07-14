@@ -1,11 +1,11 @@
 export const gradeOne = [
   {
-    kanji: '一',
+    kanji: '山',
     readings: [
-      { text: 'いち', type: true },
+      { text: 'いち', type: false },
       { text: 'に', type: false },
       { text: 'さん', type: false },
-      { text: 'やま', type: false },
+      { text: 'やま', type: true },
     ],
   },
 ];

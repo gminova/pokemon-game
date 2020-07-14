@@ -11,13 +11,17 @@ type QuestionProps = {
 };
 
 export const Question = ({ kanji, readings }: QuestionProps) => {
+  const listAnswers = readings.map(({ text, type }, i) => (
+    <li key={i} onClick={() => (type ? alert(type) : alert(type))}>
+      <button>{text}</button>
+    </li>
+  ));
+
   return (
     <>
       <p>正しい読み方を選んでください</p>
       <p>{kanji}</p>
-      {readings.map(({ text }, i) => (
-        <button key={i}>{text}</button>
-      ))}
+      <ol>{listAnswers}</ol>
     </>
   );
 };
