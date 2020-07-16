@@ -7,6 +7,7 @@ import {
   generateRandomInteger,
 } from '../utils/functions';
 import { gradeOne } from '../data/kanji';
+import { Button } from './Button';
 
 export const Vocabulary = () => {
   const randomInteger = generateRandomInteger(1, 807);
@@ -57,6 +58,7 @@ export const Vocabulary = () => {
         src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${randomInteger}.png`}
         alt="pokemon"
       />
+      <Button />
     </>
   );
 };

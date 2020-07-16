@@ -1,37 +1,31 @@
 import React, { useState } from 'react';
 import { generateRandomInteger } from '../utils/functions';
+import { fetchPokemon } from '../api/api';
 
-const defaultUrl = 'https://pokeapi.co/static/pokeapi_256.888baca4.png';
+const defaultUrl =
+  'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png';
 
 const pokeImgUrl = 'https://pokeapi.co/api/v2/pokemon/';
 
 export const Button = () => {
-  const [imgUrl, setImgUrl] = useState(defaultUrl);
+  const [pokemon, setPokemon] = useState({
+    sprites: { front_default: defaultUrl },
+  });
 
   return (
     <>
       <button
         onClick={() =>
-          fetch(`${pokeImgUrl}${generateRandomInteger(1, 100)}`).then((res) =>
-            res
-              .json()
-              .then((json) =>
-                localStorage.setItem(
-                  'pokemon',
-                  JSON.stringify(json.sprites.front_default)
-                )
-              )
-              .then(() =>
-                setImgUrl(
-                  JSON.parse(localStorage.getItem('pokemon') || defaultUrl)
-                )
-              )
+          fetchPokemon(
+            `${pokeImgUrl}${generateRandomInteger(1, 100)}`,
+            setPokemon,
+            defaultUrl
           )
         }
       >
         Click me!
       </button>
-      <img src={imgUrl} alt="pokemon" />
+      <img src={pokemon.sprites.front_default} alt="pokemon" />
     </>
   );
 };

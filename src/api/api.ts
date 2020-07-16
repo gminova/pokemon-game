@@ -1,9 +1,13 @@
-export const fetchData = async (url: string): Promise<Object> => {
-  try {
-    const response = await fetch(url);
-    return await response.json();
-  } catch (error) {
-    // TODO: Gracefully handle error
-    return error;
-  }
-};
+export const fetchPokemon = (
+  url: string,
+  setState: any,
+  defaultState: string
+) =>
+  fetch(url).then((res) =>
+    res
+      .json()
+      .then((json) => localStorage.setItem('pokemon', JSON.stringify(json)))
+      .then(() =>
+        setState(JSON.parse(localStorage.getItem('pokemon') || defaultState))
+      )
+  );
